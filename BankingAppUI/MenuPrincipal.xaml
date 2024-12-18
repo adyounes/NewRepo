@@ -1,0 +1,24 @@
+﻿<Window x:Class="BankingAppUI.MenuPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankingAppUI"
+        mc:Ignorable="d"
+        Title="MenuPrincipal" Height="300" Width="500">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Menu Principal" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+            <Button Content="1. Créer un compte privé" Width="300" Margin="0,5,0,0" Click="CreatePriveeClient_Click"/>
+            <Button Content="2. Créer un compte professionnel" Width="300" Margin="0,5,0,0" Click="CreateProClient_Click"/>
+            <Button Content="3. Afficher les comptes" Width="300" Margin="0,5,0,0" Click="DisplayAccounts_Click"/>
+            <Button Content="4. Afficher tous les clients" Width="300" Margin="0,5,0,0" Click="DisplayClients_Click"/>
+            <Button Content="5. Ajouter des transactions depuis un fichier JSON" Width="300" Margin="0,5,0,0" Click="AddTransactionsFromJson_Click"/>
+            <Button Content="6. Exporter les mouvements bancaires en PDF" Width="300" Margin="0,5,0,0" Click="ExportToPdf_Click"/>
+            <Button Content="7. Exporter les anomalies en XML" Width="300" Margin="0,5,0,0" Click="ExportToXml_Click"/>
+            <Button Content="8. Effectuer un virement entre comptes" Width="300" Margin="0,5,0,0" Click="PerformTransfer_Click"/>
+            <Button Content="9. Quitter" Width="300" Margin="0,5,0,0" Click="QuitButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

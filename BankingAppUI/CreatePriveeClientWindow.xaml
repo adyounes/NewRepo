@@ -1,0 +1,48 @@
+﻿<Window x:Class="BankingWpfApp.CreatePriveeClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Créer un Compte Privé" Height="450" Width="500">
+
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Créer un Compte Privé" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
+
+            <Label Content="Nom :" />
+            <TextBox Name="NameTextBox" Width="200">
+                <TextBox.Foreground>
+                    <SolidColorBrush Color="Gray"/>
+                </TextBox.Foreground>
+                <TextBox.Text>
+                    <Binding Path="Text" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.TargetNullValue>
+                            <TextBlock Text="Libellé" />
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
+            <Label Content="Prénom :" />
+            <TextBox Name="FirstNameTextBox" Width="200"/>
+
+            <Label Content="Mail de Contact :" />
+            <TextBox Name="MailTextBox" Width="200"/>
+
+            <Label Content="Date de Naissance :" />
+            <DatePicker Name="BirthDatePicker" />
+
+            <Label Content="Sexe :" />
+            <ComboBox Name="GenderComboBox">
+                <ComboBoxItem Content="Masculin" />
+                <ComboBoxItem Content="Féminin" />
+            </ComboBox>
+
+            <Label Content="Adresse :" />
+            <TextBox Name="StreetTextBox" Width="200"/>
+            <TextBox Name="ComplementTextBox" Width="200"/>
+            <TextBox Name="PostalCodeTextBox" Width="200"/>
+            <TextBox Name="CityTextBox" Width="200"/>
+
+            <Button Content="Créer" Width="100" Margin="0,10,0,0" Click="CreateButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
